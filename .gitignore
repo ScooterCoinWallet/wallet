@@ -5,7 +5,9 @@ src/litecoin
 src/litecoind
 src/litecoin-cli
 src/litecoin-tx
+src/litecoin-wallet
 src/test/test_litecoin
+src/test/test_litecoin_fuzzy
 src/qt/test/test_litecoin-qt
 
 # autoreconf
@@ -43,9 +45,16 @@ src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
 
+src/qt/bitcoin-qt.config
+src/qt/bitcoin-qt.creator
+src/qt/bitcoin-qt.creator.user
+src/qt/bitcoin-qt.files
+src/qt/bitcoin-qt.includes
+
 .deps
 .dirstamp
 .libs
+.vscode
 .*.swp
 *.*~*
 *.bak
@@ -55,10 +64,10 @@ src/qt/test/moc*.cpp
 *.o
 *.o-*
 *.patch
-.bitcoin
 *.a
 *.pb.cc
 *.pb.h
+*.dat
 
 *.log
 *.trs
@@ -75,27 +84,24 @@ src/qt/test/moc*.cpp
 *.qm
 Makefile
 litecoin-qt
-Litecoin-Qt.app
+litecoin-Qt.app
+background.tiff*
 
 # Unit-tests
 Makefile.test
 litecoin-qt_test
-src/test/buildenv.py
 
 # Resources cpp
 qrc_*.cpp
-
-# Qt creator
-*.pro.user
-
 # Mac specific
 .DS_Store
 build
 
 #lcov
 *.gcno
+*.gcda
 /*.info
-test_bitcoin.coverage/
+test_litecoin.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -103,11 +109,18 @@ coverage_percent.txt
 linux-coverage-build
 linux-build
 win32-build
-qa/pull-tester/run-bitcoind-for-test.sh
-qa/pull-tester/tests-config.sh
-qa/pull-tester/cache/*
-qa/pull-tester/test.*/*
+test/config.ini
+test/cache/*
 
 !src/leveldb*/Makefile
 
 /doc/doxygen/
+
+libbitcoinconsensus.pc
+contrib/devtools/split-debug.sh
+
+# Output from running db4 installation
+db4/
+
+# clang-check
+*.plist
