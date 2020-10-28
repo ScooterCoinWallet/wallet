@@ -82,13 +82,13 @@ public:
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1603789200; // Octover 27, 2020
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1603875600; // Octover 28, 2020
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1603789200; // October 27, 2020
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1603875600; // October 28, 2020
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1603789200; // Octover 27, 2020
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1603875600; // Octover 28, 2020
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1603789200; // October 27, 2020
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1603875600; // October 28, 2020
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000696b212c0ae1f46");
